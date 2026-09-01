@@ -1,6 +1,4 @@
-/* =========================
-   GENERAL
-========================= */
+/* RESET */
 
 * {
     margin: 0;
@@ -14,22 +12,20 @@ html {
 
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
     background: #f5f5f5;
     color: #222;
+    line-height: 1.6;
 }
 
 
-/* =========================
-   NAVIGATION
-========================= */
+/* NAVIGATION */
 
 header {
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 100;
 
-    background: rgba(255, 255, 255, 0.95);
+    background: white;
     border-bottom: 1px solid #ddd;
 }
 
@@ -37,7 +33,7 @@ nav {
     max-width: 1100px;
     margin: auto;
 
-    padding: 18px 25px;
+    padding: 20px 25px;
 
     display: flex;
     justify-content: space-between;
@@ -62,319 +58,12 @@ nav a {
 }
 
 nav a:hover {
-    color: #666;
-}
-
-
-/* =========================
-   HERO / HOME
-========================= */
-
-.hero {
-    min-height: 90vh;
-
-    display: flex;
-    align-items: center;
-
-    max-width: 1100px;
-    margin: auto;
-    padding: 80px 25px;
-}
-
-.hero-content {
-    max-width: 750px;
-}
-
-.intro,
-.section-label {
-    font-size: 13px;
-    letter-spacing: 3px;
-    font-weight: bold;
     color: #777;
-    margin-bottom: 20px;
-}
-
-.hero h1 {
-    font-size: clamp(45px, 8vw, 90px);
-    line-height: 1.05;
-    margin-bottom: 30px;
-}
-
-.hero p {
-    max-width: 600px;
-    color: #666;
-    margin-bottom: 30px;
-}
-
-.button {
-    display: inline-block;
-
-    background: #222;
-    color: white;
-
-    padding: 13px 22px;
-
-    text-decoration: none;
-    border-radius: 4px;
-}
-
-.button:hover {
-    background: #444;
 }
 
 
-/* =========================
-   SECTIONS
-========================= */
+/* HOME */
 
-.section {
-    max-width: 1100px;
-    margin: auto;
-
-    padding: 120px 25px;
-}
-
-.section h2 {
-    font-size: 50px;
-    margin-bottom: 20px;
-}
-
-.section-description {
-    max-width: 600px;
-    color: #666;
-    margin-bottom: 50px;
-}
-
-
-/* =========================
-   ACCOMPLISHMENT CARDS
-========================= */
-
-.cards {
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 25px;
-}
-
-.card {
-    background: white;
-    padding-bottom: 25px;
-
-    border: 1px solid #ddd;
-}
-
-.card-image {
-    height: 200px;
-
-    background: #e5e5e5;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    color: #888;
-    font-size: 13px;
-}
-
-.card h3,
-.card p,
-.card span {
-    margin-left: 22px;
-    margin-right: 22px;
-}
-
-.card h3 {
-    margin-top: 25px;
-    margin-bottom: 10px;
-}
-
-.card p {
-    color: #666;
-    font-size: 14px;
-    margin-bottom: 20px;
-}
-
-.card span {
-    font-size: 12px;
-    letter-spacing: 2px;
-    color: #888;
-}
-
-
-/* =========================
-   PRESENT
-========================= */
-
-.present {
-    background: #222;
-    color: white;
-
-    max-width: none;
-
-    padding-left: calc((100% - 1050px) / 2);
-    padding-right: calc((100% - 1050px) / 2);
-}
-
-.present .section-label {
-    color: #aaa;
-}
-
-.present-content {
-    display: grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
-    gap: 80px;
-
-    margin-top: 50px;
-}
-
-.present-content h3 {
-    font-size: 25px;
-    margin-bottom: 15px;
-}
-
-.present-content p {
-    color: #bbb;
-    margin-bottom: 20px;
-}
-
-.status-box {
-    border-left: 1px solid #555;
-    padding-left: 40px;
-}
-
-.status-item {
-    margin-bottom: 25px;
-}
-
-.status-item strong {
-    color: white;
-}
-
-.status-item p {
-    margin: 5px 0 0;
-}
-
-
-/* =========================
-   FUTURE VISION
-========================= */
-
-.vision {
-    display: grid;
-
-    grid-template-columns:
-        100px 1fr;
-
-    gap: 30px;
-
-    padding: 30px 0;
-
-    border-top: 1px solid #ddd;
-}
-
-.vision-number {
-    font-size: 30px;
-    font-weight: bold;
-    color: #aaa;
-}
-
-.vision h3 {
-    font-size: 25px;
-    margin-bottom: 8px;
-}
-
-.vision p {
-    max-width: 600px;
-    color: #666;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-    text-align: center;
-
-    background: #111;
-    color: white;
-
-    padding: 80px 25px;
-}
-
-footer p {
-    color: #aaa;
-}
-
-.copyright {
-    margin-top: 40px;
-    font-size: 12px;
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 700px) {
-
-    nav {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    nav ul {
-        gap: 12px;
-    }
-
-    nav a {
-        font-size: 12px;
-    }
-
-    .hero {
-        min-height: 80vh;
-    }
-
-    .section {
-        padding: 80px 20px;
-    }
-
-    .section h2 {
-        font-size: 40px;
-    }
-
-    .cards {
-        grid-template-columns: 1fr;
-    }
-
-    .present {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .present-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .status-box {
-        border-left: none;
-        border-top: 1px solid #555;
-        padding-left: 0;
-        padding-top: 30px;
-    }
-
-    .vision {
-        grid-template-columns: 50px 1fr;
-        gap: 15px;
-    }
-}
 .home {
     max-width: 1100px;
     min-height: 85vh;
@@ -387,6 +76,16 @@ footer p {
     justify-content: center;
 }
 
+.intro {
+    font-size: 13px;
+    letter-spacing: 4px;
+    font-weight: bold;
+
+    color: #777;
+
+    margin-bottom: 20px;
+}
+
 .home h1 {
     font-size: clamp(50px, 8vw, 90px);
     line-height: 1.05;
@@ -396,21 +95,19 @@ footer p {
 
 .home-description {
     max-width: 600px;
+
     color: #666;
 
     margin-bottom: 60px;
 }
 
 
-/* =========================
-   JOURNEY BUTTONS
-========================= */
+/* PAST / PRESENT / FUTURE BUTTONS */
 
 .journey-buttons {
     display: grid;
 
-    grid-template-columns:
-        repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 
     gap: 20px;
 }
@@ -418,12 +115,13 @@ footer p {
 .journey-card {
     position: relative;
 
+    display: block;
+
     background: white;
     border: 1px solid #ddd;
 
-    padding: 30px;
-
     min-height: 230px;
+    padding: 30px;
 
     text-decoration: none;
     color: #222;
@@ -435,6 +133,8 @@ footer p {
     transform: translateY(-8px);
 
     border-color: #222;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 .journey-card .number {
@@ -464,11 +164,137 @@ footer p {
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+/* GENERAL SECTIONS */
+
+.section {
+    max-width: 1100px;
+    margin: auto;
+
+    padding: 100px 25px;
+}
+
+.section h1 {
+    font-size: 60px;
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+}
+
+.section-label {
+    font-size: 13px;
+    letter-spacing: 4px;
+    font-weight: bold;
+
+    color: #777;
+
+    margin-bottom: 20px;
+}
+
+.section-description {
+    max-width: 600px;
+
+    color: #666;
+
+    margin-bottom: 50px;
+}
+
+
+/* CARDS */
+
+.cards {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.card {
+    background: white;
+
+    border: 1px solid #ddd;
+
+    padding-bottom: 25px;
+}
+
+.card-image {
+    height: 200px;
+
+    background: #e5e5e5;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #888;
+    font-size: 13px;
+}
+
+.card h3,
+.card p,
+.card span {
+    margin-left: 22px;
+    margin-right: 22px;
+}
+
+.card h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #666;
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+}
+
+.card span {
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    color: #888;
+}
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+
+    background: #111;
+    color: white;
+
+    padding: 60px 25px;
+}
+
+footer p {
+    color: #aaa;
+}
+
+
+/* MOBILE */
 
 @media (max-width: 700px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 12px;
+    }
+
+    .home {
+        padding: 70px 20px;
+    }
+
+    .home h1 {
+        font-size: 50px;
+    }
 
     .journey-buttons {
         grid-template-columns: 1fr;
@@ -478,4 +304,15 @@ footer p {
         min-height: 180px;
     }
 
+    .section {
+        padding: 70px 20px;
+    }
+
+    .section h1 {
+        font-size: 45px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
 }
