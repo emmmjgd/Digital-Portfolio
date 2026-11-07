@@ -229,7 +229,7 @@ nav a:hover {
 }
 
 .card-image {
-    height: 60px; 
+    height: 130px; 
     background: #0f172a;
     display: flex;
     justify-content: center;
@@ -237,7 +237,7 @@ nav a:hover {
     color: #94a3b8;
     font-size: 11px;
     border-bottom: 1px solid #334155;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 .card-image img {
@@ -246,6 +246,7 @@ nav a:hover {
     object-fit: cover;
     display: block;
 }
+
 .card h3,
 .card p,
 .card span {
