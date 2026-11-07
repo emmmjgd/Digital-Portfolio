@@ -30,9 +30,9 @@ header {
 }
 
 nav {
-    max-width: 1200px;
+    max-width: 950px; /* Tighter container width */
     margin: auto;
-    padding: 10px 20px;
+    padding: 12px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -61,24 +61,25 @@ nav a:hover {
 }
 
 
-/* HOME HERO LAYOUT (Text Left, Image Right) */
+/* HOME HERO LAYOUT (Closer together, larger photo) */
 
 .home {
-    max-width: 1100px;
+    max-width: 950px; /* Constrained width so items stay centered and close */
     width: 100%;
     margin: auto;
-    padding: 15px 20px;
+    padding: 10px 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-grow: 1;
+    gap: 20px;
 }
 
 .home-hero-layout {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 40px;
+    gap: 30px; /* Puts text and photo closer together */
 }
 
 .home-text-col {
@@ -90,21 +91,21 @@ nav a:hover {
     letter-spacing: 3px;
     font-weight: bold;
     color: #60a5fa;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
 }
 
 .home h1 {
-    font-size: 32px;
+    font-size: 30px;
     line-height: 1.15;
     color: #f8fafc;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 }
 
 .home-description {
     color: #94a3b8;
-    font-size: 13px;
+    font-size: 12px;
     line-height: 1.4;
-    max-width: 500px;
+    max-width: 450px;
 }
 
 .home-description a {
@@ -112,11 +113,11 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Compact side profile picture box */
+/* Bigger, prominent side profile picture box */
 .profile-pic-container {
-    width: 200px;
-    height: 230px;
-    border-radius: 10px;
+    width: 250px;
+    height: 200px;
+    border-radius: 8px;
     background: #1e293b;
     border: 1px solid #334155;
     flex-shrink: 0;
@@ -154,7 +155,7 @@ nav a:hover {
 
 .journey-card:hover {
     border-color: #60a5fa;
-    transform: translateY(-3px);
+    transform: translateY(-2px);
 }
 
 .journey-card h2 {
@@ -181,7 +182,7 @@ nav a:hover {
 /* GENERAL SECTIONS (For About & Other pages) */
 
 .section {
-    max-width: 1100px;
+    max-width: 950px;
     width: 100%;
     margin: auto;
     padding: 15px 20px;
@@ -200,14 +201,14 @@ nav a:hover {
 }
 
 .section h1 {
-    font-size: 30px;
+    font-size: 28px;
     line-height: 1.1;
     color: #f8fafc;
     margin-bottom: 6px;
 }
 
 .section-description {
-    max-width: 800px;
+    max-width: 700px;
     color: #94a3b8;
     font-size: 12px;
     margin-bottom: 12px;
