@@ -484,6 +484,13 @@ nav a:hover {
     margin-top: 8px;
 }
 
+.bullet-list {
+    color: #cbd5e1;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-top: 4px;
+}
+
 
 /* FOOTER */
 
