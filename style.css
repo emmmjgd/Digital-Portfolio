@@ -1,6 +1,6 @@
 /* RESET */
 
-- {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -31,7 +31,7 @@ header {
 }
 
 nav {
-    max-width: 1150px;
+    max-width: 1350px; /* Expanded max-width */
     margin: auto;
     padding: 16px 24px;
     display: flex;
@@ -65,7 +65,7 @@ nav a:hover {
 /* --- EXPANDED HOME PAGE LAYOUT --- */
 
 .home {
-    max-width: 1150px;
+    max-width: 1350px;
     width: 100%;
     margin: auto;
     padding: 24px 32px;
@@ -183,7 +183,7 @@ nav a:hover {
 /* GENERAL SECTIONS (For About & Other pages) */
 
 .section {
-    max-width: 1150px;
+    max-width: 1350px;
     width: 100%;
     margin: auto;
     padding: 20px 24px;
@@ -328,7 +328,7 @@ nav a:hover {
 /* --- ACHIEVEMENTS PAGE (Locked Viewport Fit + Strict Image Sizing) --- */
 
 .achievements-section {
-    max-width: 1150px;
+    max-width: 1350px; /* Expanded max-width for wider layout */
     width: 100%;
     margin: auto;
     padding: 16px 24px;
@@ -357,9 +357,9 @@ nav a:hover {
 
 .achievements-grid {
     display: grid;
-    grid-template-columns: 1fr 1.6fr 1fr; /* Increased center column width ratio */
+    grid-template-columns: 1.2fr 1.4fr 1.2fr; /* Balanced columns for wider cards */
     grid-template-rows: auto auto;
-    gap: 14px;
+    gap: 16px;
     align-items: center;
     position: relative;
 }
@@ -443,6 +443,7 @@ nav a:hover {
     font-size: 13px;
     line-height: 1.4;
     margin-top: 2px;
+    white-space: nowrap; /* Forces each bullet point onto a single line */
 }
 
 .achieve-center-container {
@@ -452,13 +453,13 @@ nav a:hover {
     background: #1e293b;
     border: 1px solid #334155;
     border-radius: 10px;
-    padding: 10px; /* Slightly increased padding */
+    padding: 10px;
     text-align: center;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
 }
 
 .achieve-wall-photo {
-    height: 225px; /* Increased height to make the center photo significantly larger */
+    height: 235px; /* Proportional height matching the wider layout */
     background: #0f172a;
     border-radius: 6px;
     overflow: hidden;
