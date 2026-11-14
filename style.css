@@ -311,9 +311,8 @@ nav a:hover {
     color: #cbd5e1;
     margin-bottom: 6px;
     line-height: 1.4;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    white-space: normal; /* Changed from nowrap so text wraps */
+    overflow: visible;   /* Prevents cutting off text */
 }
 
 .info-list li:last-child {
