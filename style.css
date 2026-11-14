@@ -307,8 +307,8 @@ nav a:hover {
     color: #cbd5e1;
     margin-bottom: 6px;
     line-height: 1.4;
-    white-space: normal; /* Fixed to allow text wrapping */
-    overflow: visible;   /* Fixed to prevent ellipses clipping */
+    white-space: normal; /* Fixed text wrapping */
+    overflow: visible;   /* Prevents ellipses clipping */
 }
 
 .info-list li:last-child {
@@ -325,13 +325,13 @@ nav a:hover {
 }
 
 
-/* --- ACHIEVEMENTS PAGE (Locked Viewport Fit + Side Logos) --- */
+/* --- ACHIEVEMENTS PAGE (Locked Viewport Fit + Strict Image Sizing) --- */
 
 .achievements-section {
     max-width: 1150px;
     width: 100%;
     margin: auto;
-    padding: 20px 24px;
+    padding: 16px 24px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -340,26 +340,26 @@ nav a:hover {
 
 .achievements-header {
     text-align: center;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
 }
 
 .achievements-header h1 {
-    font-size: 32px;
+    font-size: 28px;
     color: #f8fafc;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
 }
 
 .achievements-header .section-description {
     margin: 0 auto;
     text-align: center;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .achievements-grid {
     display: grid;
-    grid-template-columns: 1fr 1.35fr 1fr;
+    grid-template-columns: 1fr 1.25fr 1fr;
     grid-template-rows: auto auto;
-    gap: 16px;
+    gap: 14px;
     align-items: center;
     position: relative;
 }
@@ -372,13 +372,12 @@ nav a:hover {
 .achieve-card {
     background: #1e293b;
     border: 1px solid #334155;
-    padding: 16px 18px;
+    padding: 16px;
     border-radius: 8px;
     z-index: 1;
-    transition: transform 0.2s ease;
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 16px;
 }
 
 .jhs, .extra {
@@ -387,4 +386,114 @@ nav a:hover {
 }
 
 .achieve-card:hover {
-    border-color: #6
+    border-color: #60a5fa;
+    z-index: 3;
+}
+
+/* Strict box boundary for the logo */
+.card-logo {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    min-height: 50px;
+    border-radius: 8px;
+    background: #0f172a;
+    border: 1px solid #334155;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* Forces the image to stay small inside the 50x50 box */
+.card-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.card-logo.icon-box {
+    font-size: 22px;
+    color: #60a5fa;
+}
+
+.card-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.achieve-card .card-tag {
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #60a5fa;
+    font-weight: 600;
+}
+
+.achieve-card h3 {
+    margin-top: 2px;
+    margin-bottom: 4px;
+    font-size: 16px;
+    color: #f8fafc;
+}
+
+.bullet-list {
+    color: #e2e8f0;
+    font-size: 13px;
+    line-height: 1.4;
+    margin-top: 2px;
+}
+
+.achieve-center-container {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    z-index: 2;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    padding: 8px;
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+.achieve-wall-photo {
+    height: 170px;
+    background: #0f172a;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #334155;
+}
+
+.achieve-wall-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.achieve-center-container span {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #60a5fa;
+    font-weight: 600;
+    margin-top: 6px;
+}
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    background: #070a10;
+    color: white;
+    padding: 12px 24px;
+    border-top: 1px solid #334155;
+    flex-shrink: 0;
+}
+
+footer p {
+    color: #94a3b8;
+    font-size: 13px;
+}
