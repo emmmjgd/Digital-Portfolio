@@ -1,3 +1,4 @@
+/* RESET */
 
 * {
     margin: 0;
@@ -12,7 +13,7 @@ html, body {
 
 body {
     font-family: Arial, sans-serif;
-    font-size: 16px; /* Larger, easily readable baseline size */
+    font-size: 16px;
     background: linear-gradient(135deg, #090d16 0%, #0f172a 50%, #1e293b 100%);
     color: #e2e8f0;
     display: flex;
@@ -30,7 +31,7 @@ header {
 }
 
 nav {
-    max-width: 1000px;
+    max-width: 1150px;
     margin: auto;
     padding: 16px 24px;
     display: flex;
@@ -61,25 +62,25 @@ nav a:hover {
 }
 
 
-/* HOME HERO LAYOUT */
+/* --- EXPANDED HOME PAGE LAYOUT --- */
 
 .home {
-    max-width: 1000px;
+    max-width: 1150px;
     width: 100%;
     margin: auto;
-    padding: 20px 24px;
+    padding: 24px 32px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     flex-grow: 1;
-    gap: 24px;
+    gap: 28px;
 }
 
 .home-hero-layout {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 40px;
+    gap: 50px;
 }
 
 .home-text-col {
@@ -95,17 +96,17 @@ nav a:hover {
 }
 
 .home h1 {
-    font-size: 38px;
-    line-height: 1.2;
+    font-size: 44px;
+    line-height: 1.15;
     color: #f8fafc;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
 }
 
 .home-description {
     color: #cbd5e1;
     font-size: 16px;
     line-height: 1.5;
-    max-width: 520px;
+    max-width: 580px;
 }
 
 .home-description a {
@@ -114,14 +115,14 @@ nav a:hover {
 }
 
 .profile-pic-container {
-    width: 280px;
-    height: 220px;
-    border-radius: 10px;
+    width: 320px;
+    height: 240px;
+    border-radius: 12px;
     background: #1e293b;
     border: 1px solid #334155;
     flex-shrink: 0;
     overflow: hidden;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.6);
 }
 
 .profile-pic-container img {
@@ -132,15 +133,10 @@ nav a:hover {
 }
 
 
-/* JOURNEY CARDS (Home Page Bottom Row) */
+/* FOUR-COLUMN JOURNEY CARDS */
 
 .journey-buttons {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-}
-
-.journey-buttons.four-cols {
     grid-template-columns: repeat(4, 1fr);
     gap: 16px;
 }
@@ -150,7 +146,7 @@ nav a:hover {
     display: block;
     background: #1e293b;
     border: 1px solid #334155;
-    padding: 18px 20px;
+    padding: 20px;
     text-decoration: none;
     color: #f8fafc;
     border-radius: 10px;
@@ -163,7 +159,7 @@ nav a:hover {
 }
 
 .journey-card h2 {
-    font-size: 19px;
+    font-size: 18px;
     color: #f8fafc;
     margin-top: 8px;
     margin-bottom: 4px;
@@ -187,7 +183,7 @@ nav a:hover {
 /* GENERAL SECTIONS (For About & Other pages) */
 
 .section {
-    max-width: 1000px;
+    max-width: 1150px;
     width: 100%;
     margin: auto;
     padding: 20px 24px;
@@ -311,8 +307,8 @@ nav a:hover {
     color: #cbd5e1;
     margin-bottom: 6px;
     line-height: 1.4;
-    white-space: normal; /* Changed from nowrap so text wraps */
-    overflow: visible;   /* Prevents cutting off text */
+    white-space: normal; /* Fixed to allow text wrapping */
+    overflow: visible;   /* Fixed to prevent ellipses clipping */
 }
 
 .info-list li:last-child {
@@ -332,7 +328,7 @@ nav a:hover {
 /* --- ACHIEVEMENTS PAGE (Locked Viewport Fit + Side Logos) --- */
 
 .achievements-section {
-    max-width: 1000px;
+    max-width: 1150px;
     width: 100%;
     margin: auto;
     padding: 20px 24px;
@@ -370,4 +366,25 @@ nav a:hover {
 
 .elem  { grid-column: 1; grid-row: 1; }
 .jhs   { grid-column: 3; grid-row: 1; }
-.shs   { grid-column: 1; grid-row: 2;
+.shs   { grid-column: 1; grid-row: 2; }
+.extra { grid-column: 3; grid-row: 2; }
+
+.achieve-card {
+    background: #1e293b;
+    border: 1px solid #334155;
+    padding: 16px 18px;
+    border-radius: 8px;
+    z-index: 1;
+    transition: transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.jhs, .extra {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.achieve-card:hover {
+    border-color: #6
